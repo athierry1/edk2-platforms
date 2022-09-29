@@ -388,7 +388,7 @@ SyncPcie (
    * triggering the mailbox by removing the node.
    */
 
-  Node = fdt_path_offset (mFdtImage, "/scb/pcie@7d500000/pci@0,0");
+  Node = fdt_path_offset (mFdtImage, "/scb/pcie@7d500000/pci@0,0/usb@0,0");
   if (Node < 0) {
     // This can happen on CM4/etc which doesn't have an onboard XHCI
     DEBUG ((DEBUG_INFO, "%a: failed to locate /scb/pcie@7d500000/pci@0/usb@0\n", __FUNCTION__));
